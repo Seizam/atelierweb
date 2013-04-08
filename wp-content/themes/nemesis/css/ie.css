@@ -1,0 +1,25 @@
+input[type="submit"], input[type="button"], a.button, .pagination a
+{
+	padding: .65em 1.5em .65em 1.5em;
+}
+
+hr
+{
+	text-align: left;
+}
+
+.portfolio200_overlay img, .portfolio460_overlay img, .portfolio305_overlay img, .portfolio195_overlay img, .portfolio200_overlay img, .portfolio_type_wrapper
+{
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+
+input[type=text], input[type=password], select, textarea
+{
+	border: 1px solid #ccc;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: bold;
+}

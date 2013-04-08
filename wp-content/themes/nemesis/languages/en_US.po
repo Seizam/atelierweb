@@ -1,0 +1,659 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Minos Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-19 14:10+0700\n"
+"PO-Revision-Date: 2011-08-19 14:10+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;_e;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:46
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr ""
+
+#: ../archive.php:69
+#: ../archive.php:71
+#: ../archive.php:73
+#, php-format
+msgid "Archives \"%s\""
+msgstr ""
+
+#: ../archive.php:75
+msgid "Blog Archives"
+msgstr ""
+
+#: ../blog_2.php:169
+#: ../blog_l.php:196
+#: ../blog_r.php:196
+msgid "Posted by"
+msgstr ""
+
+#: ../blog_2.php:330
+#: ../blog_l.php:357
+#: ../blog_r.php:357
+msgid "Read more"
+msgstr ""
+
+#: ../category.php:31
+#, php-format
+msgid " %s"
+msgstr ""
+
+#: ../comments.php:3
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: ../contact.php:161
+msgid "Name"
+msgstr ""
+
+#: ../contact.php:169
+msgid "Email"
+msgstr ""
+
+#: ../contact.php:177
+msgid "Message"
+msgstr ""
+
+#: ../contact.php:185
+msgid "Address"
+msgstr ""
+
+#: ../contact.php:193
+msgid "Phone"
+msgstr ""
+
+#: ../contact.php:201
+msgid "Mobile"
+msgstr ""
+
+#: ../contact.php:209
+msgid "Company Name"
+msgstr ""
+
+#: ../contact.php:217
+msgid "Country"
+msgstr ""
+
+#: ../contact.php:227
+msgid "Send Message"
+msgstr ""
+
+#: ../contact.php:266
+msgid "Please enter your name"
+msgstr ""
+
+#: ../contact.php:267
+msgid "Please enter a valid email address"
+msgstr ""
+
+#: ../contact.php:268
+msgid "Please enter some message"
+msgstr ""
+
+#: ../functions.php:64
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:65
+msgid "Top Menu"
+msgstr ""
+
+#: ../header.php:801
+msgid "Search..."
+msgstr ""
+
+#: ../search.php:29
+#, php-format
+msgid "Search Results for &quot;%s&quot;"
+msgstr ""
+
+#: ../single.php:274
+msgid "About the author"
+msgstr ""
+
+#: ../single.php:309
+msgid "Related Posts"
+msgstr ""
+
+#: ../fields/post.fields.php:8
+msgid "Add New Slide"
+msgstr ""
+
+#: ../fields/post.fields.php:9
+msgid "Edit Slide"
+msgstr ""
+
+#: ../fields/post.fields.php:10
+msgid "New Slide"
+msgstr ""
+
+#: ../fields/post.fields.php:11
+msgid "View Slide"
+msgstr ""
+
+#: ../fields/post.fields.php:12
+msgid "Search Slides"
+msgstr ""
+
+#: ../fields/post.fields.php:13
+msgid "No slide found"
+msgstr ""
+
+#: ../fields/post.fields.php:14
+msgid "No slides found in Trash"
+msgstr ""
+
+#: ../fields/post.fields.php:40
+msgid "Add New Portfolio"
+msgstr ""
+
+#: ../fields/post.fields.php:41
+msgid "Edit Portfolio"
+msgstr ""
+
+#: ../fields/post.fields.php:42
+msgid "New Portfolio"
+msgstr ""
+
+#: ../fields/post.fields.php:43
+msgid "View Portfolio"
+msgstr ""
+
+#: ../fields/post.fields.php:44
+msgid "Search Portfolios"
+msgstr ""
+
+#: ../fields/post.fields.php:45
+msgid "No Portfolio found"
+msgstr ""
+
+#: ../fields/post.fields.php:46
+msgid "No Portfolios found in Trash"
+msgstr ""
+
+#: ../fields/post.fields.php:68
+msgid "Search Sets"
+msgstr ""
+
+#: ../fields/post.fields.php:69
+msgid "All Sets"
+msgstr ""
+
+#: ../fields/post.fields.php:70
+msgid "Parent Set"
+msgstr ""
+
+#: ../fields/post.fields.php:71
+msgid "Parent Set:"
+msgstr ""
+
+#: ../fields/post.fields.php:72
+msgid "Edit Set"
+msgstr ""
+
+#: ../fields/post.fields.php:73
+msgid "Update Set"
+msgstr ""
+
+#: ../fields/post.fields.php:74
+msgid "Add New Set"
+msgstr ""
+
+#: ../fields/post.fields.php:75
+msgid "New Set Name"
+msgstr ""
+
+#: ../fields/post.fields.php:96
+msgid "Thumbnail"
+msgstr ""
+
+#: ../lib/custom.lib.php:78
+msgid "Next"
+msgstr ""
+
+#: ../lib/custom.lib.php:80
+msgid "Previous"
+msgstr ""
+
+#: ../lib/custom.lib.php:130
+msgid "You are here"
+msgstr ""
+
+#: ../lib/custom.lib.php:201
+msgid "Search results for"
+msgstr ""
+
+#: ../lib/custom.lib.php:204
+msgid "Posts tagged"
+msgstr ""
+
+#: ../lib/custom.lib.php:211
+msgid "Articles posted by"
+msgstr ""
+
+#: ../lib/custom.lib.php:214
+msgid "Error 404"
+msgstr ""
+
+#: ../lib/custom.lib.php:219
+msgid "Page"
+msgstr ""
+
+#: ../lib/custom.lib.php:244
+msgid "(Your comment is awaiting moderation.)"
+msgstr ""
+
+#: ../lib/custom.lib.php:330
+msgid "Recent Posts"
+msgstr ""
+
+#: ../lib/custom.lib.php:338
+msgid "Popular Posts"
+msgstr ""
+
+#: ../lib/custom.lib.php:460
+msgid "Continue Reading"
+msgstr ""
+
+#: ../plugins/shortcode_generator.php:25
+#: ../plugins/theme_store.php:19
+#: ../plugins/troubleshooting.php:18
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-library-menu.php:212
+msgid "Attachment Tags"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-library-menu.php:225
+msgid "Search Media"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-library-menu.php:246
+msgid "Bulk Actions"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-library-menu.php:247
+msgid "Delete Permanently"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-library-menu.php:248
+msgid "Attach to a Post"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-library-menu.php:249
+msgid "Detach from a Post"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-library-menu.php:251
+msgid "Set/Replace Tags"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-library-menu.php:252
+msgid "Add Tags"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-media-library.php:381
+msgid "Associate tags with image attachments to easily include them in multiple image galleries."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-media-library.php:417
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:93
+msgid "Author"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-media-library.php:441
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:166
+msgid "No Tags"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-media-library.php:458
+#: ../plugins/shiba-media-library/shiba-media-library.php:468
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:122
+#, php-format
+msgid "Edit &#8220;%s&#8221;"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:50
+msgid "No tags found!"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:101
+msgid "No posts found."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:103
+msgid "Title"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:103
+msgid "Time"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:103
+msgid "Status"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:109
+msgid "Published"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:112
+msgid "Scheduled"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:115
+msgid "Pending Review"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:118
+msgid "Unpublished"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-ajax.php:126
+msgid "Y/m/d"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-controls.php:34
+msgid "Shiba Media Tools"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-controls.php:45
+msgid "Image Link Domains: "
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-controls.php:60
+msgid "Shared wp-content domains for multisite: "
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:27
+msgid "Gallery Description"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:89
+msgid "ID"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:92
+msgid "Images"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:95
+msgid "Categories"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:96
+msgid "Tags"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:154
+msgid "Uncategorized"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:208
+#, php-format
+msgid "Gallery updated. <a href=\"%s\">View gallery</a>"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:209
+msgid "Custom field updated."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:210
+msgid "Custom field deleted."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:211
+msgid "Gallery updated."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:213
+#, php-format
+msgid "Gallery restored to revision from %s"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:214
+#, php-format
+msgid "Gallery published. <a href=\"%s\">View gallery</a>"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:215
+msgid "Gallery saved."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:216
+#, php-format
+msgid "Gallery submitted. <a target=\"_blank\" href=\"%s\">Preview gallery</a>"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:217
+#, php-format
+msgid "Gallery scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview gallery</a>"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:219
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:220
+#, php-format
+msgid "Gallery draft updated. <a target=\"_blank\" href=\"%s\">Preview gallery</a>"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:221
+msgid "Media removed from gallery."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:222
+msgid "Media permanently deleted."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:223
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:443
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:133
+msgid "Undo"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:223
+msgid "Media moved to the trash. <a href=\""
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:224
+msgid "Media restored from the trash."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:251
+msgid "Add an Image"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:277
+msgid "Detach from Gallery"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:279
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:442
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:195
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:313
+msgid "Move to Trash"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:341
+msgid "Description"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:343
+msgid "The description is not prominent by default, however some plugins may show it."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:395
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:213
+msgid "Show all dates"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:436
+msgid "Delete"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:437
+#, php-format
+msgid "You are about to delete <strong>%s</strong>."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:438
+msgid "Continue"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-helper.php:439
+#, fuzzy
+msgid "Cancel"
+msgstr "Leave a Reply"
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:55
+msgid "You are not allowed to move this post to the trash."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:58
+msgid "Error in moving to trash..."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:65
+msgid "You are not allowed to move this post out of the trash."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:68
+msgid "Error in restoring from trash..."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:75
+msgid "You are not allowed to delete this post."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:78
+msgid "Error in deleting..."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:105
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:130
+msgid "Gallery added."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:131
+msgid "Gallery permanently deleted."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:132
+msgid "Error saving gallery."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:133
+msgid "Gallery moved to the trash."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:134
+msgid "Gallery restored from the trash."
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:149
+#: ../plugins/shiba-media-library/shiba-mlib-permalink.php:39
+msgid "Search Gallery"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:191
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:309
+msgid "Restore"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:255
+msgid "&laquo;"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:256
+msgid "&raquo;"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-manage.php:265
+#, php-format
+msgid "Displaying %s&#8211;%s of %s"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-permalink.php:35
+msgid "Add New Gallery"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-permalink.php:36
+msgid "Edit Gallery"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-permalink.php:37
+msgid "New Gallery"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-permalink.php:38
+msgid "View Gallery"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-permalink.php:40
+msgid "No galleries found"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-mlib-permalink.php:41
+msgid "No galleries found in Trash"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-tag-metabox.php:21
+msgid "Add new tag"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-tag-metabox.php:22
+msgid "Add or remove tags"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-tag-metabox.php:23
+msgid "Choose from the most used tags"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-tag-metabox.php:46
+msgid "Post Tags"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-tag-metabox.php:52
+msgid "Gallery Tags"
+msgstr ""
+
+#: ../plugins/shiba-media-library/shiba-tag-metabox.php:54
+msgid "You cannot modify this taxonomy."
+msgstr ""
+
+#: ../templates/comments-form.php:13
+msgid "Leave a Reply"
+msgstr "Leave a Reply"
+
+#: ../templates/comments-form.php:26
+msgid "Website"
+msgstr ""
+
+#: ../templates/comments-form.php:36
+#, fuzzy
+msgid "Cancel Reply"
+msgstr "Leave a Reply"
+
+#: ../templates/template-portfolio-1.php:68
+#: ../templates/template-portfolio-1lr.php:68
+#: ../templates/template-portfolio-2.php:68
+#: ../templates/template-portfolio-2lr.php:68
+#: ../templates/template-portfolio-3.php:68
+#: ../templates/template-portfolio-3l.php:68
+msgid "All Projects"
+msgstr ""
+

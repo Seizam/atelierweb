@@ -1,0 +1,273 @@
+/*
+ * jQuery FlexSlider v1.8
+ * http://flex.madebymufffin.com
+ *
+ * Copyright 2011, Tyler Smith
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none; text-align: center; } 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {width: 100%; margin: 0; padding: 0; height: 420px; }
+.flexslider.portfolio { height: 440px; }
+.flexslider.small { height: 370px; }
+.flexslider.small.macbook { width: 496px; height: 314px; top: 29px; left: 130px; }
+.flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {max-width: 100%; display: block; -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2), 0 1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.2);}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider { position: relative; zoom: 1;}
+.flexslider .slides {zoom: 1;}
+.flexslider .slides > li {position: relative;}
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {zoom: 1; position: relative;}
+
+/* Caption style */
+/* IE rgba() hack */
+.flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}
+.flex-caption {width: 96%; padding: 2%; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,.3); color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,.3); font-size: 14px; line-height: 18px;}
+
+/* Direction Nav */
+.flex-direction-nav li a {opacity: 0; width: 43px; height: 42px; margin: -13px 0 0; display: block; position: absolute; top: 44%; cursor: pointer; text-indent: -9999px;}
+.home_portfolio .flex-direction-nav li a { top: 36%; }
+.home_portfolio .flex-direction-nav li a.prev { left: 21%; }
+.home_portfolio .flex-direction-nav li a.next { right: -50px; }
+.flex-direction-nav li .next {right: 11px; background: transparent url("../../images/next_btn.png") no-repeat;}
+.flex-direction-nav li .prev {left: 10px; background: transparent url("../../images/prev_btn.png") no-repeat;}
+.flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+#slider_wrapper .flex-control-nav {width: 100%; height: 10px; position: absolute; right: 0; bottom: 0; text-align: center;}
+#slider_wrapper.slide .flex-control-nav { height: 13px; }
+.flex-control-nav li {margin: 0 5px 0 0; display: inline-block; zoom: 1; }
+.flex-control-nav li:first-child { }
+.flex-control-nav li a { background: #ccc; margin: 5px 0 0 0; height: 10px; width: 10px;display: block; cursor: pointer; text-indent: -9999px; -webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;}
+.flex-control-nav li a:hover {background: #EF3B24;}
+.flex-control-nav li a.active {background: #EF3B24; cursor: default;}
+.flex-control-nav li:last-child { margin-right: 0; }
+.home_portfolio .flex-control-nav li, .home_portfolio .flex-control-nav li:last-child { float:none; }
+.home_portfolio .flex-control-nav li a.active, .home_portfolio .flex-control-nav li a:hover { opacity:1;filter:alpha(opacity=100); }
+
+#slider_wrapper .flexslider ul.slides li a .slide_content_left, #slider_wrapper .flexslider.small ul.slides li a .slide_content_left, #slider_wrapper .flexslider ul.slides li a .slide_desc_left
+{
+	position: absolute;
+	top: 365px;
+	left: 15px;
+	max-width: 350px;
+	padding: 10px 15px 15px 15px;
+	text-align: left;
+	color: #fff;
+	background: #ef3b24;
+	font-size: 11px;
+}
+
+#slider_wrapper .flexslider ul.slides li a .slide_content_left h5, #slider_wrapper .flexslider ul.slides li a .slide_desc_left h5
+{
+	color: #fff;
+}
+
+#slider_wrapper .flexslider ul.slides li a .slide_content_right, #slider_wrapper .flexslider ul.slides li a .slide_desc_right
+{
+	position: absolute;
+	top: 365px;
+	right: 15px;
+	max-width: 350px;
+	padding: 10px 15px 15px 15px;
+	text-align: left;
+	color: #fff;
+	background: #ef3b24;
+	font-size: 11px;
+}
+
+#slider_wrapper .flexslider ul.slides li a .slide_content_right h5, #slider_wrapper .flexslider ul.slides li a .slide_desc_right h5
+{
+	color: #fff;
+}
+
+#slider_wrapper.small .flexslider.small ul.slides li a .slide_content_left
+{
+	top: 260px;
+	padding: 5px 10px 5px 10px;
+	animation: reset, slide-left 0.8s;
+	-moz-animation: reset, slide-left 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-left 0.8s; /* Safari and Chrome */
+	border: 0;
+}
+
+#slider_wrapper .flexslider ul.slides li a .slide_content_left
+{
+	top: 290px;
+	padding: 5px 10px 5px 10px;
+	animation: reset, slide-left 0.8s;
+	-moz-animation: reset, slide-left 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-left 0.8s; /* Safari and Chrome */
+	border: 0;
+}
+
+#slider_wrapper.small .flexslider.small.macbook ul.slides li a .slide_content_left
+{
+	top: 230px;
+	padding: 5px 10px 5px 10px;
+	animation: reset, slide-left 0.8s;
+	-moz-animation: reset, slide-left 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-left 0.8s; /* Safari and Chrome */
+	border: 0;
+}
+
+#slider_wrapper .flexslider.small ul.slides li a .slide_desc_left
+{
+	top: 291px;
+	padding: 5px 10px 5px 10px;
+	animation: reset, slide-left 0.8s;
+	-moz-animation: reset, slide-left 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-left 0.8s; /* Safari and Chrome */
+	background: transparent url('../../images/000_70.png') repeat;
+}
+
+#slider_wrapper .flexslider ul.slides li a .slide_desc_left
+{
+	padding: 5px 10px 5px 10px;
+	background: transparent url('../../images/000_70.png') repeat;
+	animation: reset, slide-left 0.8s;
+	-moz-animation: reset, slide-left 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-left 0.8s; /* Safari and Chrome */
+	top: 342px;
+}
+
+#slider_wrapper .flexslider.small.macbook ul.slides li a .slide_desc_left
+{
+	top: 261px;
+	padding: 5px 10px 5px 10px;
+	animation: reset, slide-left 0.8s;
+	-moz-animation: reset, slide-left 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-left 0.8s; /* Safari and Chrome */
+	background: transparent url('../../images/000_70.png') repeat;
+}
+
+#slider_wrapper.small .flexslider.small ul.slides li a .slide_content_right
+{
+	top: 260px;
+	padding: 5px 10px 5px 10px;
+	animation: reset, slide-right 0.8s;
+	-moz-animation: reset, slide-right 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-right 0.8s; /* Safari and Chrome */
+	border: 0;
+}
+
+#slider_wrapper .flexslider ul.slides li a .slide_content_right
+{
+	top: 290px;
+	padding: 5px 10px 5px 10px;
+	animation: reset, slide-right 0.8s;
+	-moz-animation: reset, slide-right 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-right 0.8s; /* Safari and Chrome */
+	border: 0;
+}
+
+#slider_wrapper.small .flexslider.small.macbook ul.slides li a .slide_content_right
+{
+	top: 230px;
+	padding: 5px 10px 5px 10px;
+	animation: reset, slide-right 0.8s;
+	-moz-animation: reset, slide-right 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-right 0.8s; /* Safari and Chrome */
+	border: 0;
+}
+
+#slider_wrapper .flexslider.small ul.slides li a .slide_desc_right
+{
+	top: 291px;
+	padding: 5px 10px 5px 10px;
+	animation: slide_right 0.8s;
+	animation: reset, slide-right 0.8s;
+	-moz-animation: reset, slide-right 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-right 0.8s; /* Safari and Chrome */
+	background: transparent url('../../images/000_70.png') repeat;
+}
+
+#slider_wrapper .flexslider ul.slides li a .slide_desc_right
+{
+	padding: 5px 10px 5px 10px;
+	background: transparent url('../../images/000_70.png') repeat;
+	animation: reset, slide-right 0.8s;
+	-moz-animation: reset, slide-right 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-right 0.8s; /* Safari and Chrome */
+	top: 342px;
+}
+
+#slider_wrapper .flexslider.small.macbook ul.slides li a .slide_desc_right
+{
+	top: 261px;
+	padding: 5px 10px 5px 10px;
+	animation: slide_right 0.8s;
+	animation: reset, slide-right 0.8s;
+	-moz-animation: reset, slide-right 0.8s; /* Firefox */
+	-webkit-animation: reset, slide-right 0.8s; /* Safari and Chrome */
+	background: #fff;
+}
+
+#slider_wrapper .flexslider ul.slides li a .slide_content_left h5, #slider_wrapper .flexslider ul.slides li a .slide_content_right h5
+{
+	font-size: 28px;
+}
+
+#slider_wrapper.small .flexslider ul.slides li a .slide_content_left h5, #slider_wrapper.small .flexslider ul.slides li a .slide_content_right h5
+{
+	font-size: 14px;
+}
+
+#slider_wrapper .flexslider ul.slides li .slide_video_right
+{
+	margin: 45px 40px 0 20px;
+	float: right;
+}
+
+#slider_wrapper .flexslider ul.slides li.video
+{
+	height: 400px;
+	background: rgba(0,0,0,.02) url("../../images/skins/right_strip_pattern.png") repeat;
+}
+
+#slider_wrapper .flexslider ul.slides li .slide_video_left
+{
+	width: 310px;
+	margin: 65px 0px 0px 50px;
+	float: left;
+	text-align: left;
+}
+
+#slider_wrapper .flexslider ul.slides li .slide_video_left h5
+{
+	font-size: 32px;
+}
+
+.single-portfolios #slider_wrapper
+{
+	margin-top: 0;
+}
