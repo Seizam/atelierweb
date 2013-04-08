@@ -19,13 +19,13 @@
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
 /** Nom de la base de données de WordPress. */
-define('DB_NAME', 'votre_nom_de_bdd');
+define('DB_NAME', 'atelierweb');
 
 /** Utilisateur de la base de données MySQL. */
-define('DB_USER', 'votre_utilisateur_de_bdd');
+define('DB_USER', 'atelierweb');
 
 /** Mot de passe de la base de données MySQL. */
-define('DB_PASSWORD', 'votre_mdp_de_bdd');
+define('DB_PASSWORD', 'atelierweb');
 
 /** Adresse de l'hébergement MySQL. */
 define('DB_HOST', 'localhost');
@@ -49,14 +49,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here'); 
-define('SECURE_AUTH_KEY',  'put your unique phrase here'); 
-define('LOGGED_IN_KEY',    'put your unique phrase here'); 
-define('NONCE_KEY',        'put your unique phrase here'); 
-define('AUTH_SALT',        'put your unique phrase here'); 
-define('SECURE_AUTH_SALT', 'put your unique phrase here'); 
-define('LOGGED_IN_SALT',   'put your unique phrase here'); 
-define('NONCE_SALT',       'put your unique phrase here'); 
+define('AUTH_KEY',         ',BhXTSry5+O97Fy6a5~ECP-ulF@-Lo`$C$C{[5?h`JWE`4&9KZPW;?Qz2B(O/ 3@');
+define('SECURE_AUTH_KEY',  'p GBJT+|mf1Yvv|1+wIuc|Dmg[L{;c~t{-.=(Qc8T[]L^l/0%f,q~2;|u*|ewZG,');
+define('LOGGED_IN_KEY',    'U}Pcx-W2LPM~#{zUp@)%-l=9vGn>RX0RF0- R,g5] `|`[Uaj0)JXjKQ5IW|3qU7');
+define('NONCE_KEY',        'bM^T)U<B90.,77.@(U!trd/Wu/Bz,Rk:A(w8Mg*.{ZfB}eGq+jG C%y7./m}3?g}');
+define('AUTH_SALT',        '0miG7w3`ZW_EVpqVP_5l--1.r>[!*Go!Yc+=GtZJuCsa4G9e2+^c 4<tn=k+OUiv');
+define('SECURE_AUTH_SALT', 'Pqq3-n}+|.=bcvWr8*l3L+-n%Y%{O&k0jU@3t>Cc*Uuz,e53k:oX7F5z,Z0Y/T}7');
+define('LOGGED_IN_SALT',   'k*ayD7#=Ah m`PnZuf#R-As$4$Pqox{Cn}8wT,|Q*2kK)ZYkW]1K7{Rejx-5?A6n');
+define('NONCE_SALT',       'jvz-8v;4iRWL8nw|-mz4+I1}19_y%BI]Y3e$=J=_Iq/{7_nRZ*Hr$cG/vti[ppV|');
 /**#@-*/
 
 /**
