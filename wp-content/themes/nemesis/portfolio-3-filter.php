@@ -180,7 +180,7 @@ if(!isset($hide_header) OR !$hide_header)
     		?>
     			
     					<li>
-    						<img src="<?php echo $image_slide[0]; ?>" alt="<?php echo $photo_item->post_title; ?>"/>
+    						<img src="<?php echo $image_slide[0]; ?>" alt="<?php echo apply_filters( 'the_title', $photo_item->post_title, $photo_item->ID ); ?>"/>
     					</li>
     			
     		<?php	
@@ -221,8 +221,8 @@ if(!isset($hide_header) OR !$hide_header)
     			}
     		?>	
     			<div class="ajax_content">
-    				<h4 class="center"><?php echo $portfolio_item->post_title; ?></h4><br/><hr/><br/>
-    				<?php echo pp_apply_content($portfolio_item->post_content); ?>
+    				<h4 class="center"><?php echo apply_filters( 'the_title', $portfolio_item->post_title, $portfolio_item->ID ); ?></h4><br/><hr/><br/>
+    				<?php echo pp_apply_content(apply_filters('the_content', $portfolio_item->post_content)); ?>
     			</div>
 		</div>
     
@@ -243,9 +243,10 @@ if(!empty($sets_arr) && empty($term))
     	<?php
     		foreach($sets_arr as $key => $set_item)
     		{
+				$item_name = apply_filters( 'term_name', $set_item->name );
     	?>
     	<li class="cat-item <?php echo $set_item->slug; ?>" data-type="<?php echo $set_item->slug; ?>" style="clear:none">
-    		<a data-filter=".<?php echo $set_item->slug; ?>" href="javascript:;" title="<?php echo $set_item->name; ?>"><?php echo $set_item->name; ?></a> 
+    		<a data-filter=".<?php echo $set_item->slug; ?>" href="javascript:;" title="<?php echo $item_name; ?>"><?php echo $item_name; ?></a> 
     	</li> 
     	<?php
     		}
@@ -259,7 +260,7 @@ if(!empty($sets_arr) && empty($term))
 			<?php
 			    if(!empty($page->post_excerpt) && !is_home())
 			    {
-			    	echo pp_apply_content($page->post_excerpt).'<br class="clear"/><br/>';
+			    	echo pp_apply_content(apply_filters('the_excerpt', $page->post_excerpt)).'<br class="clear"/><br/>';
 			    }
 			?>
 			
@@ -330,9 +331,9 @@ if(!empty($sets_arr) && empty($term))
 			    	        	<img src="<?php echo $image_url[0]?>" alt="" class="portfolio_img"/>
 			    	        	<div class="portfolio305_overlay">
 			    	        		<div class="portfolio305_overlay_inner">
-				    	        		<h4><?php echo $portfolio_item->post_title; ?></h4>
+				    	        		<h4><?php echo apply_filters( 'the_title', $portfolio_item->post_title, $portfolio_item->ID ); ?></h4>
 				    	        		<hr/>
-				    	        		<?php echo pp_substr($portfolio_item->post_excerpt, 300); ?>
+				    	        		<?php echo pp_substr(apply_filters('the_excerpt', $portfolio_item->post_excerpt), 300); ?>
 				    	        		<div class="portfolio_type_wrapper">
 				    	        			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_link.png" alt="" class=""/>
 				    	        		</div>
@@ -353,9 +354,9 @@ if(!empty($sets_arr) && empty($term))
 			    	        	<img src="<?php echo $image_url[0]?>" alt="" class="portfolio_img"/>
 			    	        	<div class="portfolio305_overlay">
 				    	        	<div class="portfolio305_overlay_inner">
-				    	        		<h4><?php echo $portfolio_item->post_title; ?></h4>
+				    	        		<h4><?php echo apply_filters( 'the_title', $portfolio_item->post_title, $portfolio_item->ID ); ?></h4>
 				    	        		<hr/>
-				    	        		<?php echo pp_substr($portfolio_item->post_excerpt, 300); ?>
+				    	        		<?php echo pp_substr(apply_filters('the_excerpt', $portfolio_item->post_excerpt), 300); ?>
 				    	        		<div class="portfolio_type_wrapper">
 				    	        			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_link.png" alt="" class=""/>
 				    	        		</div>
@@ -378,9 +379,9 @@ if(!empty($sets_arr) && empty($term))
 	        					<img src="<?php echo $image_url[0]?>" alt="" class="portfolio_img"/>
 	        					<div class="portfolio305_overlay">
 		        				    <div class="portfolio305_overlay_inner">
-					    	        	<h4><?php echo $portfolio_item->post_title; ?></h4>
+					    	        	<h4><?php echo apply_filters( 'the_title', $portfolio_item->post_title, $portfolio_item->ID ); ?></h4>
 					    	        	<hr/>
-					    	        	<?php echo pp_substr($portfolio_item->post_excerpt, 300); ?>
+					    	        	<?php echo pp_substr(apply_filters('the_excerpt', $portfolio_item->post_excerpt), 300); ?>
 					    	        	<div class="portfolio_type_wrapper">
 					    	        		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_link.png" alt="" class=""/>
 					    	        	</div>
@@ -400,9 +401,9 @@ if(!empty($sets_arr) && empty($term))
 			    	        	<img src="<?php echo $image_url[0]?>" alt="" class="portfolio_img"/>
 			    	        	<div class="portfolio305_overlay">
 				    	        	<div class="portfolio305_overlay_inner">
-				    	        		<h4><?php echo $portfolio_item->post_title; ?></h4>
+				    	        		<h4><?php echo apply_filters( 'the_title', $portfolio_item->post_title, $portfolio_item->ID ); ?></h4>
 				    	        		<hr/>
-				    	        		<?php echo pp_substr($portfolio_item->post_excerpt, 300); ?>
+				    	        		<?php echo pp_substr(apply_filters('the_excerpt', $portfolio_item->post_excerpt), 300); ?>
 				    	        		<div class="portfolio_type_wrapper">
 				    	        			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_image.png" alt="" class=""/>
 				    	        		</div>
@@ -422,9 +423,9 @@ if(!empty($sets_arr) && empty($term))
 			    	        	<img src="<?php echo $image_url[0]?>" alt="" class="portfolio_img"/>
 			    	        	<div class="portfolio305_overlay">
 				    	        	<div class="portfolio305_overlay_inner">
-				    	        		<h4><?php echo $portfolio_item->post_title; ?></h4>
+				    	        		<h4><?php echo apply_filters( 'the_title', $portfolio_item->post_title, $portfolio_item->ID ); ?></h4>
 				    	        		<hr/>
-				    	        		<?php echo pp_substr($portfolio_item->post_excerpt, 300); ?>
+				    	        		<?php echo pp_substr(apply_filters('the_excerpt', $portfolio_item->post_excerpt), 300); ?>
 				    	        		<div class="portfolio_type_wrapper">
 				    	        			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_video.png" alt="" class=""/>
 				    	        		</div>
@@ -452,9 +453,9 @@ if(!empty($sets_arr) && empty($term))
 			    		    	<img src="<?php echo $image_url[0]?>" alt="" class="portfolio_img"/>
 			    		    	<div class="portfolio305_overlay">
 				    	        	<div class="portfolio305_overlay_inner">
-				    	        		<h4><?php echo $portfolio_item->post_title; ?></h4>
+				    	        		<h4><?php echo apply_filters( 'the_title', $portfolio_item->post_title, $portfolio_item->ID ); ?></h4>
 				    	        		<hr/>
-				    	        		<?php echo pp_substr($portfolio_item->post_excerpt, 300); ?>
+				    	        		<?php echo pp_substr(apply_filters('the_excerpt', $portfolio_item->post_excerpt), 300); ?>
 				    	        		<div class="portfolio_type_wrapper">
 				    	        			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_video.png" alt="" class=""/>
 				    	        		</div>
@@ -486,9 +487,9 @@ if(!empty($sets_arr) && empty($term))
 			    		    	<img src="<?php echo $image_url[0]?>" alt="" class="portfolio_img"/>
 			    		    	<div class="portfolio305_overlay">
 				    	        	<div class="portfolio305_overlay_inner">
-				    	        		<h4><?php echo $portfolio_item->post_title; ?></h4>
+				    	        		<h4><?php echo apply_filters( 'the_title', $portfolio_item->post_title, $portfolio_item->ID ); ?></h4>
 				    	        		<hr/>
-				    	        		<?php echo pp_substr($portfolio_item->post_excerpt, 300); ?>
+				    	        		<?php echo pp_substr(apply_filters('the_excerpt', $portfolio_item->post_excerpt), 300); ?>
 				    	        		<div class="portfolio_type_wrapper">
 				    	        			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_video.png" alt="" class=""/>
 				    	        		</div>
