@@ -18,7 +18,7 @@ $pp_advance_responsive = get_option('pp_advance_responsive');
 if(!empty($pp_advance_responsive))
 {
 ?>
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <?php
 }
 ?>
