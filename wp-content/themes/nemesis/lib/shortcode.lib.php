@@ -1636,4 +1636,49 @@ function gallery_func($atts, $content) {
 }
 add_shortcode('gallery', 'gallery_func');
 
+function twitter_func($atts, $content) {
+
+	//extract short code attr
+	extract(shortcode_atts(array(
+		'username' => '',
+		'title' => '',
+		'items' => 5,
+	), $atts));
+
+	$return_html = '';
+	
+	if (!empty($username)) {
+		
+		$items = ( empty($items) || !is_numeric($items) ) ? '5' : $items ;
+		$title = empty($title) ? 'Recent Tweets' : $title ;
+		// Begin get user timeline
+		include_once (TEMPLATEPATH . "/lib/twitter.lib.php");
+		$obj_twitter = new Twitter($username);
+		$tweets = $obj_twitter->get($items);
+
+		if (!empty($tweets)) {
+			$return_html .= '<h2 class="widgettitle">' . $title . '</h2>';
+			$return_html .= '<ul class="twitter">';
+
+			foreach ($tweets as $tweet) {
+				$return_html .= '<li>';
+
+				if (isset($tweet[0])) {
+					$return_html .= $tweet[0];
+				}
+
+				$return_html .= '</li>';
+			}
+
+			$return_html .= '</ul>';
+			$return_html .= '<div class="twitter_arrow"></div>';
+			$return_html .= '<div class="twitter_username"><img src="' . get_stylesheet_directory_uri() . '/images/icon_twitter_bird.png" class="middle" alt="" style="margin-right:5px"/>Follow <a href="http://twitter.com/' . $username . '">@' . $username . '</a></div>';
+		}
+	}
+
+	return $return_html;
+}
+
+add_shortcode('twitter', 'twitter_func');
+
 ?>

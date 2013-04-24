@@ -358,6 +358,19 @@ function pp_shortcode_generator_options() {
 			),
 			'content' => TRUE,
 		),
+		'twitter' => array(
+			'attr' => array(
+				'username' => 'text',
+				'title' => 'text',
+				'items' => 'text',
+			),
+			'desc' => array(
+				// 'username' => 'Twitter Username',
+				// 'title' => 'Title',
+				'items' => 'default 5',
+			),
+			'content' => FALSE,
+		),
 	);
 
 ?>
