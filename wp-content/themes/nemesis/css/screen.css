@@ -3852,3 +3852,7 @@ to {right:15px;opacity: 1;}
 .standard_wrapper.contact_page .sidebar_wrapper, .standard_wrapper.contact_page .sidebar_content {
 	margin-top: 2%;
 }
+
+span.wpcf7-not-valid-tip {
+	width: 200px;
+}
