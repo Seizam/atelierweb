@@ -191,7 +191,7 @@ line-height: 19px; background: transparent url("../images/pre_bg.png") repeat; b
 	Input layout
 */
 
-input[type=text], input[type=password], select, textarea
+input[type=text], input[type=email], input[type=tel], input[type=password], select, textarea
 {
 	padding: 10px 10px 8px;
 	margin: 0 5px 0 0;
@@ -208,7 +208,7 @@ input[type=text], input[type=password], select, textarea
 	box-shadow: 0 0 2px rgba(170, 170, 170, 1), inset 0 -3px 0 rgba(245, 245, 245, 1);
 }
 
-input[type=text].blur, textarea.blur
+input[type=text].blur, input[type=email].blur, input[type=tel].blur, textarea.blur
 {
 	color: #999;
 	font-style: italic;
@@ -231,7 +231,7 @@ label
 	font-weight:normal;
 }
 
-#contact_form label, #commentform label
+.wpcf7-form label, #contact_form label, #commentform label
 {
 	float: left;
 	margin-left: 10px;
@@ -239,7 +239,7 @@ label
 	margin-bottom: 25px;
 }
 
-#contact_form label.error, #commentform label.error
+.wpcf7-form label.error, #contact_form label.error, #commentform label.error
 {
 	color: #AC1C20;
 	float: left;
@@ -247,7 +247,7 @@ label
 	margin-bottom: 0;
 }
 
-#contact_form input, #contact_form textarea, #commentform input, #commentform textarea
+.wpcf7-form input, .wpcf7-form textarea, #contact_form input, #contact_form textarea, #commentform input, #commentform textarea
 {
 	float: left;
 	margin-bottom: 15px;
