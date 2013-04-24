@@ -3848,3 +3848,7 @@ to {right:15px;opacity: 1;}
 	width: 80%;
 	margin:auto;
 }
+
+.standard_wrapper.contact_page .sidebar_wrapper, .standard_wrapper.contact_page .sidebar_content {
+	margin-top: 2%;
+}
