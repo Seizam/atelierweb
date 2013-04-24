@@ -25,7 +25,7 @@ function qtrans_header(){
 	$css = "<style type=\"text/css\" media=\"screen\">\n";
 	$css .=".qtrans_flag span { display:none }\n";
 	$css .=".qtrans_flag { height:12px; width:18px; display:block }\n";
-	$css .=".qtrans_flag_and_text { padding-left:20px }\n";
+	$css .=".qtrans_flag_and_text { padding-left:25px }\n";
 	$baseurl = WP_CONTENT_URL;
 	if(isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == '1' || $_SERVER['HTTPS'] == 'on')) {
 		$baseurl = preg_replace('#^http://#','https://', $baseurl);
