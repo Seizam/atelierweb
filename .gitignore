@@ -3,3 +3,4 @@ wp-config.php
 /nbproject/private/
 wp-content/languages/
 wp-content/themes/nemesis/cache/
+wp-content/w3tc-config/
