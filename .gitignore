@@ -4,3 +4,8 @@ wp-config.php
 wp-content/languages/
 wp-content/themes/nemesis/cache/
 wp-content/w3tc-config/
+wp-content/advanced-cache.php
+wp-content/cache/
+wp-content/db.php
+wp-content/object-cache.php
+
