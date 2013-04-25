@@ -21,7 +21,8 @@
 
 function qtrans_header(){
 	global $q_config;
-	echo "\n<meta http-equiv=\"Content-Language\" content=\"".str_replace('_','-',$q_config['locale'][$q_config['language']])."\" />\n";
+	// validator.w3.org says : Using the meta element to specify the document-wide default language is obsolete. Consider specifying the language on the root element instead.
+	// echo "\n<meta http-equiv=\"Content-Language\" content=\"".str_replace('_','-',$q_config['locale'][$q_config['language']])."\" />\n";
 	$css = "<style type=\"text/css\" media=\"screen\">\n";
 	$css .=".qtrans_flag span { display:none }\n";
 	$css .=".qtrans_flag { height:12px; width:18px; display:block }\n";
