@@ -1049,4 +1049,29 @@ if (isset($_GET['activated']) && $_GET['activated']){
 	include_once(TEMPLATEPATH . "/default_settings.php");
     wp_redirect(admin_url("themes.php?page=functions.php&activate=true"));
 }
+
+
+function my_menu_class($menu) {
+
+	$homeUrl = home_url();
+
+	foreach ($menu as $key => $element) {
+
+		$url = $element->url;
+
+		if ($url[strlen($url) - 1] == '/') {
+			$homeUrl .= '/';
+		}
+
+		if ($url == $homeUrl) {
+			$menu[$key]->url = get_bloginfo('url', 'display');
+		}
+
+	}
+	return $menu;
+     
+}
+
+add_filter('wp_nav_menu_objects' , 'my_menu_class');
+
 ?>

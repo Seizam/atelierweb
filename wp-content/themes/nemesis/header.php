@@ -342,7 +342,7 @@ if(isset($page->ID))
 			    	
 			    		?>
 			    		
-			    		<a id="custom_logo" href="<?php echo home_url(); ?>"><img src="<?php echo $pp_logo?>" alt=""/></a>
+			    		<a id="custom_logo" href="<?php bloginfo('url'); ?>"><img src="<?php echo $pp_logo?>" alt=""/></a>
 			    		
 			    		<!-- End logo -->
 			    		
