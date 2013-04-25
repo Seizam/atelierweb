@@ -143,22 +143,8 @@ if(!isset($hide_header) OR !$hide_header)
     		<a class="ajax_prev ajax_portfolio_direction" data-rel="<?php echo $portfolio_prev_id; ?>">←</a>
 			<?php
     			//If display featured image
-    			if(empty($portfolio_gallery_id))
-    			{
-    		    	$image_thumb = '';
-    		    								
-    		    	if(has_post_thumbnail($portfolio_item->ID, 'slide'))
-    		    	{
-    		    	    $image_id = get_post_thumbnail_id($portfolio_item->ID);
-    		    	    $image_thumb = wp_get_attachment_image_src($image_id, 'slide', true);
-    		    	}
-    		?>
-    				<img src="<?php echo $image_thumb[0]; ?>" alt="" class="portfolio_single_img img_shadow"/>
-    		<?php
-    			}
-    			//If display image gallery
-    			else
-    			{
+    			if( ! empty($portfolio_gallery_id)) {
+					// display image gallery
     		?>
     		<br class="clear"/>
     		<div id="portfolio_slider_<?php echo $portfolio_item->ID; ?>" class="flexslider portfolio">
