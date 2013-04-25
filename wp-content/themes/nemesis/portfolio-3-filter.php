@@ -333,7 +333,7 @@ if(!empty($sets_arr) && empty($term))
 			    	        		<div class="portfolio305_overlay_inner">
 				    	        		<h4><?php echo apply_filters( 'the_title', $portfolio_item->post_title, $portfolio_item->ID ); ?></h4>
 				    	        		<hr/>
-				    	        		<?php echo pp_substr(apply_filters('the_excerpt', $portfolio_item->post_excerpt), 300); ?>
+				    	        		<?php echo pp_substr(apply_filters('the_excerpt', $portfolio_item->post_excerpt), 1000); ?>
 				    	        		<div class="portfolio_type_wrapper">
 				    	        			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon_link.png" alt="" class=""/>
 				    	        		</div>
