@@ -1,4 +1,4 @@
-pe<?php
+<?php
 /**
  * Template Name: Portfolio 3 Columns Filterable
  * The main template file for display portfolio page.

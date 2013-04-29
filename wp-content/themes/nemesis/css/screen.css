@@ -581,6 +581,16 @@ blockquote h3
 .social_wrapper ul li a
 {
 	display: block;
+	position: relative;
+	-webkit-transition: all 0.50s;
+	-moz-transition: all 0.50s;
+	-ms-transition: all 0.50s;
+	-o-transition: all 0.50s;
+	transition: all 0.50s;
+}
+
+.social_wrapper ul li a:hover {
+	bottom: 8px;
 }
 
 #footer .social_wrapper ul li img
