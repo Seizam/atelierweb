@@ -296,6 +296,10 @@ if(!empty($sets_arr) && empty($term))
         	{
         		$permalink_url = $portfolio_link_url;
         	}
+			
+			if ( function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage') ) {
+				$permalink_url = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($permalink_url);
+			}
         	
         	$portfolio_item_class = 'one_fourth portfolio';
         	

@@ -1,4 +1,4 @@
-<?php
+pe<?php
 /**
  * Template Name: Portfolio 3 Columns Filterable
  * The main template file for display portfolio page.
@@ -282,7 +282,11 @@ if(!empty($sets_arr) && empty($term))
 			    	    	{
 			    	    		$permalink_url = $portfolio_link_url;
 			    	    	}
-			    	    	
+							
+							if (function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) {
+								$permalink_url = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($permalink_url);
+							}
+
 			    	    	$portfolio_item_class = 'one_third';
 			    	    	if(($key+1) % 3 == 0)
 			    	    	{	
