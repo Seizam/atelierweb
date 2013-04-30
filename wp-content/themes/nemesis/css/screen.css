@@ -144,19 +144,14 @@ div.divider
 	margin:auto;
 }
 
-.copyright_wrapper .left_wrapper
-{
-	float:left;
-	width:540px;
-	margin:25px 0 15px 0;
+.copyright_wrapper .one_fourth {
+	margin-top:25px;
+	margin-bottom: 15px;
+	text-align: left;
 }
 
-.copyright_wrapper .right_wrapper
-{
-	float:right;
-	width:300px;
-	text-align:right;
-	margin:25px 0 15px 0;
+.copyright_wrapper .one_fourth.last {
+	text-align: right;
 }
 
 .top_info
@@ -2416,7 +2411,6 @@ table tr th, table tr td
 #footer ul > li.widget
 {
 	float: left;
-	width: 22%;
 	margin-right:4%;
 	margin-bottom: 0px;
 	border: 0;
@@ -2430,21 +2424,18 @@ table tr th, table tr td
 #footer ul li.widget.last
 {
 	margin-right: 15px;
-	width: 20%;
 	float:right;
 }
 
 #footer ul.three li.widget
 {
 	float: left;
-	width: 31%;
 	margin-right:3%;
 }
 
 #footer ul.three li.widget.last
 {
 	float: right;
-	width: 31%;
 	margin-right: 0;
 }
 

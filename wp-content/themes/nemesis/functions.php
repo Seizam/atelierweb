@@ -1051,6 +1051,8 @@ if (isset($_GET['activated']) && $_GET['activated']){
 }
 
 
+# i18n-izes home menu link
+# By Yannouk
 function my_menu_class($menu) {
 
 	$homeUrl = home_url();
@@ -1073,5 +1075,62 @@ function my_menu_class($menu) {
 }
 
 add_filter('wp_nav_menu_objects' , 'my_menu_class');
+
+
+# Adds custom classes to widgets
+# By Yannouk
+# From http://ednailor.com/2011/01/24/adding-custom-css-classes-to-sidebar-widgets/
+# and http://pastebin.com/7DkRJCjN
+function kc_widget_form_extend($instance, $widget) {
+	if (!isset($instance['classes']))
+		$instance['classes'] = null;
+
+	/* Set your predetermied class choices here */
+	$myarray = ",one_third,one_third.last";
+
+	$myclasses = explode(",", $myarray);
+	$row = "<p>\n";
+	$row .= "\t<label for='widget-{$widget->id_base}-{$widget->number}-classes'>Widget Display Style:</label>\n";
+	$row .= "\t<select  name='widget-{$widget->id_base}[{$widget->number}][classes]'  id='widget-{$widget->id_base}-{$widget->number}-classes'  class='widefat'>\n";
+	foreach ($myclasses as $myclass) {
+		$instance_selected = null;
+		if ($instance['classes'] == $myclass)
+			$instance_selected = " selected='selected'";
+		$row .= "\t<option value='" . $myclass . "'" . $instance_selected . ">" . ucwords(str_replace(".", " & ", str_replace("_", " ", $myclass))) . "</option>\n";
+	}
+	$row .= "</select>\n";
+	echo $row;
+	return $instance;
+}
+
+add_filter('widget_form_callback', 'kc_widget_form_extend', 10, 2);
+
+function kc_widget_update($instance, $new_instance) {
+	$instance['classes'] = $new_instance['classes'];
+	return $instance;
+}
+
+add_filter('widget_update_callback', 'kc_widget_update', 10, 2);
+
+function kc_dynamic_sidebar_params($params) {
+	global $wp_registered_widgets;
+	$widget_id = $params[0]['widget_id'];
+	$widget_obj = $wp_registered_widgets[$widget_id];
+	if (!($widgetlogicfix = $widget_obj['callback'][0]->option_name))
+		$widgetlogicfix = $widget_obj['callback_wl_redirect'][0]->option_name;
+	$widget_opt = get_option($widgetlogicfix);
+	$widget_num = $widget_obj['params'][0]['number'];
+	if (isset($widget_opt[$widget_num]['classes']) && !empty($widget_opt[$widget_num]['classes'])) {
+		$classes = explode(".", $widget_opt[$widget_num]['classes']);
+		$content = '';
+		foreach ($classes as $class) {
+			$content .= "$class ";
+		}
+		$params[0]['before_widget'] = preg_replace('/class="/', "class=\"{$content}", $params[0]['before_widget'], 1);
+	}
+	return $params;
+}
+
+add_filter('dynamic_sidebar_params', 'kc_dynamic_sidebar_params');
 
 ?>

@@ -56,7 +56,7 @@
 		
 		<div id="copyright" <?php if(empty($pp_footer_display_sidebar)) { echo 'style="border-top:0"'; } ?>>
 			<div class="copyright_wrapper">
-				<div class="left_wrapper">
+				<div class="one_fourth">
 				<?php
 					/**
 					 * Get footer left text
@@ -76,7 +76,47 @@
 				?>
 				</div>
 				
-				<div class="right_wrapper">
+				<div class="one_fourth">
+				<?php
+					/**
+					 * Get footer left text
+					 */
+	
+					$pp_footer_second_text = get_option('pp_footer_second_text');
+					if (function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) {
+						$pp_footer_second_text = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($pp_footer_second_text);
+					}
+	
+					if(empty($pp_footer_second_text))
+					{
+						$pp_footer_second_text = ' ';
+					}
+					
+					echo nl2br(stripslashes(html_entity_decode($pp_footer_second_text)));
+				?>
+				</div>
+
+				<div class="one_fourth">
+				<?php
+					/**
+					 * Get footer left text
+					 */
+	
+					$pp_footer_third_text = get_option('pp_footer_third_text');
+					if (function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) {
+						$pp_footer_third_text = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($pp_footer_third_text);
+					}
+	
+					if(empty($pp_footer_third_text))
+					{
+						$pp_footer_third_text = ' ';
+					}
+					
+					echo nl2br(stripslashes(html_entity_decode($pp_footer_third_text)));
+				?>
+				</div>
+
+				<div class="one_fourth last">
 				<?php
 					/**
 					 * Get footer right text

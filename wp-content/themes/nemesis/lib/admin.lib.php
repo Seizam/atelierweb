@@ -992,14 +992,28 @@ array( "name" => "Footer Sidebar styles",
 	),
 ),
 
-array( "name" => "<h2>Footer Content (Support HTML)</h2>Footer Content",
+array( "name" => "<h2>Footer Content (Support HTML)</h2>First Ccolumn",
 	"desc" => "You can text and HTML in here",
 	"id" => $shortname."_footer_text",
 	"type" => "textarea",
 	"std" => ""
 ),
 
-array( "name" => "Footer Right Content",
+array( "name" => "Second Column",
+	"desc" => "You can text and HTML in here",
+	"id" => $shortname."_footer_second_text",
+	"type" => "textarea",
+	"std" => ""
+),
+	
+array( "name" => "Third Column",
+	"desc" => "You can text and HTML in here",
+	"id" => $shortname."_footer_third_text",
+	"type" => "textarea",
+	"std" => ""
+),
+
+array( "name" => "Fourth Column",
 	"desc" => "You can text and HTML in here",
 	"id" => $shortname."_footer_right_text",
 	"type" => "textarea",
