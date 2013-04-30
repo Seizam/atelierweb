@@ -63,6 +63,9 @@
 					 */
 	
 					$pp_footer_text = get_option('pp_footer_text');
+					if (function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) {
+						$pp_footer_text = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($pp_footer_text);
+					}
 	
 					if(empty($pp_footer_text))
 					{
@@ -80,6 +83,9 @@
 					 */
 	
 					$pp_footer_right_text = get_option('pp_footer_right_text');
+					if (function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) {
+						$pp_footer_right_text = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($pp_footer_right_text);
+					}
 	
 					if(empty($pp_footer_right_text))
 					{
