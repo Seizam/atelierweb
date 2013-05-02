@@ -56,8 +56,8 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 .home_portfolio .flex-direction-nav li a { top: 36%; }
 .home_portfolio .flex-direction-nav li a.prev { left: 21%; }
 .home_portfolio .flex-direction-nav li a.next { right: -50px; }
-.flex-direction-nav li .next {right: 11px; background: transparent url("../../images/next_btn.png") no-repeat;}
-.flex-direction-nav li .prev {left: 10px; background: transparent url("../../images/prev_btn.png") no-repeat;}
+.flex-direction-nav li .next {right: 11px; background: transparent url("/wp-content/themes/nemesis/images/next_btn.png") no-repeat;}
+.flex-direction-nav li .prev {left: 10px; background: transparent url("/wp-content/themes/nemesis/images/prev_btn.png") no-repeat;}
 .flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 /* Control Nav */
