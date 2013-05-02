@@ -89,6 +89,11 @@ define('WPLANG', 'fr_FR');
  */ 
 define('WP_DEBUG', false); 
 
+/**
+ * Required by W3TC
+ */
+define('WP_CACHE', true);
+
 /* C'est tout, ne touchez pas à ce qui suit ! Bon blogging ! */
 
 /** Chemin absolu vers le dossier de WordPress. */

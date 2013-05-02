@@ -2485,7 +2485,7 @@ div.textwidget
 
 #footer ul li.widget ul li
 {
-	margin: 0 0 10px 0;
+	margin: 0 0 10px 6px;
 	background: transparent;
 	border: 0;
 }
